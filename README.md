@@ -8,27 +8,19 @@ Welcome to **App Manager: Analyze & Backup** ("we," "our," or "us"). We are comm
 
 Our core philosophy is privacy-first. The application is designed to operate primarily on-device and does not require account creation to use its core features.
 
-However, the app now uses **Firebase Crashlytics** for crash reporting and diagnostics. This means that if the app crashes or encounters an error, limited technical and diagnostic information may be collected and transmitted to help us identify and fix stability issues.
+However, the app uses **Firebase** for crash reporting and basic interaction analytics to help us improve app stability and measure engagement.
 
 ## 2. Data Collection and Usage
 
 **App Manager operates primarily locally on your device.**
 
-We do **not** use external servers, analytics SDKs, or tracking frameworks to monitor your behavior across apps or websites. Any data generated, analyzed, or displayed by the app (including app lists, screen time, storage metrics, and backups) remains strictly on your device unless you explicitly choose to export or share it.
+We do **not** use external servers to harvest your personal data. Any sensitive data generated, analyzed, or displayed by the app (including app lists, screen time, storage metrics, and backups) remains strictly on your device unless you explicitly choose to export or share it.
 
 ### Crash and Diagnostic Information
+The app uses **Firebase Crashlytics** to monitor crashes and technical issues. If the app crashes, limited technical information (crash logs, device model, app version) is transmitted to help us fix stability issues.
 
-The app uses **Firebase Crashlytics** to monitor crashes and technical issues.
-
-If the app crashes or encounters an error, Firebase Crashlytics may collect limited technical and diagnostic information such as:
-
-- crash logs and stack traces;
-- device model and operating system version;
-- app version and build number;
-- technical identifiers associated with the app installation;
-- general diagnostic context related to the crash or error.
-
-This information is used only to detect, prioritize, and fix stability issues and improve app quality.
+### Analytics and Interaction Tracking
+We use **Firebase Analytics** to understand how users interact with our cross-promotion features (such as the "More Apps" page). We collect limited, anonymized event data (such as which promoted app was clicked) to measure engagement and improve our app ecosystem. This data does not personally identify you.
 
 ## 3. Required Permissions and Why We Need Them
 
@@ -44,26 +36,27 @@ To provide its core functionality, App Manager requires certain Android permissi
     *   *Purpose:* Allows the app to prompt you to uninstall applications when you select the "Uninstall" or "Batch Uninstall" features.
 
 *   **Note on Storage Access:** 
-    *   *Purpose:* Unlike many app managers, this app is designed to maximize your privacy by **not** requesting broad storage permissions (`READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, or `MANAGE_EXTERNAL_STORAGE`). Instead, it uses the secure, native Android Share Sheet, allowing you to save or share extracted APKs precisely where you want them without granting the app blanket access to your personal files.
+    *   *Purpose:* Unlike many app managers, this app is designed to maximize your privacy by **not** requesting broad storage permissions (`READ_EXTERNAL_STORAGE` or `MANAGE_EXTERNAL_STORAGE`). Instead, it uses modern Android Scoped Storage and the native Android Share Sheet, allowing you to save or share extracted APKs precisely where you want them without granting the app blanket access to your personal files.
 
 ## 4. Third-Party Services
 
-The app uses **Firebase Crashlytics**, a crash reporting service provided by **Google LLC**, to monitor app crashes and improve reliability.
+The app uses **Firebase Crashlytics** and **Firebase Analytics**, provided by **Google LLC**.
 
-Firebase Crashlytics may process technical information such as crash logs, stack traces, device model, operating system version, app version, and technical identifiers associated with the app installation for the purpose of detecting, prioritizing, and fixing stability issues.
+- **Crashlytics** is used to monitor app crashes and improve reliability by processing technical information.
+- **Analytics** is used to measure user engagement with features like the "More Apps" screen by logging anonymous interaction events using the Advertising ID.
 
 More information about Firebase privacy and security is available here:  
 [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy)
 
-We do **not** integrate third-party advertising networks or analytics providers that track your behavior across other apps and websites.
+We do **not** integrate third-party advertising networks that track your behavior across other apps and websites.
 
 ## 5. Data Sharing and Disclosure
 
 We do **not** sell your personal data and do **not** share personal information for advertising or marketing purposes.
 
-Crash-related technical and diagnostic information may be processed by Firebase Crashlytics as part of the crash reporting service used by the app.
+Crash-related technical and anonymous interaction data may be processed by Firebase as part of the reporting services used by the app.
 
-The only way other data leaves the app is if you manually choose to export and share it (for example, sharing an extracted APK or backup snapshot via the Android Share Sheet).
+The only way sensitive data leaves the app is if you manually choose to export and share it (for example, sharing an extracted APK or backup snapshot via the Android Share Sheet).
 
 ## 6. Children's Privacy (COPPA)
 
@@ -75,15 +68,13 @@ The app is not intended to knowingly collect personal information from children.
 
 The app is designed with data minimization and privacy-by-design principles in mind. Most functionality operates on-device, and we limit stored information to what is needed for app features.
 
-We do not collect, process, or store personal data off-device except for limited crash and diagnostic information processed by Firebase Crashlytics as described above.
+We do not collect, process, or store personal data off-device except for limited diagnostic and anonymous interaction data processed by Firebase as described above.
 
 *   **Right to Erasure / Right to be Forgotten:** You have full control over your data. You can delete any backups or extracted APKs directly through your device's file manager. Uninstalling the app removes all associated local configurations.
 
 ## 8. Changes to This Privacy Policy
 
-We may update this Privacy Policy from time to time if we introduce new features that require different device permissions or data handling.
-
-If any changes occur, we will update this document and the "Effective Date" or "Last updated" date at the top. We encourage you to review this policy periodically.
+We may update this Privacy Policy from time to time if we introduce new features that require different device permissions or data handling. If any changes occur, we will update this document and the "Effective Date" at the top. We encourage you to review this policy periodically.
 
 ## 9. Contact Us
 
