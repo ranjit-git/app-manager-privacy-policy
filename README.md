@@ -43,8 +43,8 @@ To provide its core functionality, App Manager requires certain Android permissi
 *   **`REQUEST_DELETE_PACKAGES` (Delete Packages):**
     *   *Purpose:* Allows the app to prompt you to uninstall applications when you select the "Uninstall" or "Batch Uninstall" features.
 
-*   **Storage Access (Read/Write External Storage):**
-    *   *Purpose:* Necessary to extract APK files, save backup snapshots, and export reports to your device's storage.
+*   **Note on Storage Access:** 
+    *   *Purpose:* Unlike many app managers, this app is designed to maximize your privacy by **not** requesting broad storage permissions (`READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, or `MANAGE_EXTERNAL_STORAGE`). Instead, it uses the secure, native Android Share Sheet, allowing you to save or share extracted APKs precisely where you want them without granting the app blanket access to your personal files.
 
 ## 4. Third-Party Services
 
@@ -77,7 +77,7 @@ The app is designed with data minimization and privacy-by-design principles in m
 
 We do not collect, process, or store personal data off-device except for limited crash and diagnostic information processed by Firebase Crashlytics as described above.
 
-*   **Right to Erasure / Right to be Forgotten:** You have full control over your data. You can delete any backups or extracted APKs directly through the app or your device's file manager. Uninstalling the app removes all associated local configurations.
+*   **Right to Erasure / Right to be Forgotten:** You have full control over your data. You can delete any backups or extracted APKs directly through your device's file manager. Uninstalling the app removes all associated local configurations.
 
 ## 8. Changes to This Privacy Policy
 
